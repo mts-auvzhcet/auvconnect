@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Protest+Riot&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  .transition-line {
+    margin-top: 3px;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; 
+    transition: width 0.3s ease; 
+  }
+  
+  .bar {
+    width: 17px;
+    height: 1px;
+    background-color: #ffffffcc;
+    margin: 3.5px 0;
+    transition: 0.2s;
+  }
+  
+  .bar1.change {
+    transform: rotate(-45deg) translate(-3.5px, 3px);
+  }
+  
+  .bar2.change {
+    opacity: 0;
+  }
+  
+  .bar3.change {
+    transform: rotate(45deg) translate(-3.5px, -3px);
+  }
+  
+  .black-gradient {
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #434343,
+      #000000
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #434343,
+      #000000
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .shadow-container {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .shadow-img {
+    background-color: hsla(43, 20%, 93%, 0.784);
+    border-radius: 50%;
+    filter: blur(15px);
+    animation: shadow 1.7s infinite alternate;
+  }
+
+  .floating-img {
+    animation: floaty 1.7s infinite alternate;
+  }
+
+  @keyframes floaty {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(15px);
+    }
+  }
+  
+  @keyframes shadow {
+    0% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(.85, .85);
+    }
+  }  
+
+
+.team-image{
+ object-fit: contain; 
+  aspect-ratio:2/3;
+  /* border-radius: 80px; */
+
+}
+
+.bg-Intro{
+  background-image: url("/public/machine-img.png");
+  background-size: 100% auto;
+background-position-y: -65vh;
+}
+
+.gradient-text {
+  background: linear-gradient(180deg, #ffffff 25%, #000000 99.5%);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.image-transition,
+.video-transition {
+  transition: opacity 1s ease-in-out;
+}
+
+
+.text:hover{
+  color: #898585fb;
+  text-shadow: 0px 0px 0px #464747, 0px 0px 10px #18181b, 0px 0px 5px #7d7f7f;
+  transition: color 500ms ease-in-out, text-shadow 500ms ease-in-out, letter-spacing 500ms ease-in-out;
+  letter-spacing: 0.25vw;
+}
+
+
+.blur{
+  backdrop-filter: blur(3px);
+}
+
+.footer-gradient{
+  background: rgba(0, 0, 0, 0);
+  background: linear-gradient(156deg, rgba(0,0,0,0.1273503151260504) 10%, rgba(41, 138, 228, 0.238) 100%); 
+}
