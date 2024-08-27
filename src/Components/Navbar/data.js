@@ -1,3 +1,4 @@
+import { TagRounded } from "@mui/icons-material";
 
 
 const navBottom=[
@@ -25,14 +26,19 @@ const navBottom=[
         name:"Tech",
         link:"/GALLERY"
     },
-    {
-        name:"History",
-        link:"/GALLERY"
-    },
+    // {
+    //     name:"History",
+    //     link:"/GALLERY"
+    // },
     {
         name:"Gallery",
         link:"/GALLERY"
     },
+    {
+        name:"AMU ROVc",
+        link:"https://amurov.co.in/",
+        target: "_blank"
+    }
 ]
 
  
