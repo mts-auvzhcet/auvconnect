@@ -35,6 +35,7 @@ const Navbar = () => {
           <Link
           onClick={()=>setActive(items.name)}
            href={items.link} key={index} 
+           target={items.target ? items.target : '_self'}
            className={`${active===items.name ? "text-gray-200 scale-110" : "text-[#ffffffcc]"} ml-[4vw] flex items-center font-apple hover:text-white hover:scale-105 duration-300 ease-in` }>
             {items.name}
           </Link>
