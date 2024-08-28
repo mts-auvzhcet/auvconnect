@@ -9,7 +9,7 @@ const TeamCard = ({photo,name,position}) => {
   return (
     <div className='flex flex-col gap-5 sm:gap-7 font-poppins mt-[20px] sm:w-[31%] mb-[30px] sm:mb-[50px]'>
       {/* image */}
-      <div className=''>
+      <div className='grayscale'>
       <Image src={photo} alt="image" height={550} width={550} className='rounded-lg'/>
       </div>
 
