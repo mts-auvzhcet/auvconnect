@@ -83,10 +83,10 @@ const Footer = () => {
                   Contact us
                 </div>
                 <div className='text-center text-gray-400'>
-                  <LocalPhoneIcon className='w-[18px] h-[18px] mr-[5px] text-gray-400'/>+91 9837264374, +91 8372537493
+                  <LocalPhoneIcon className='w-[18px] h-[18px] mr-[5px] text-gray-400'/>+91 8171296181, +91 7535879134, +91 7302415928
                 </div>
                 <div className='text-center text-gray-400'>
-                  <MailIcon className='w-[18px] h-[18px] mr-[5px] text-gray-400'/> auvzhcet@gmail.com
+                  <MailIcon className='w-[18px] h-[18px] mr-[5px] text-gray-400'/> auvzhcet@zhcet.ac.in
                 </div>
               </div>
             </div>
@@ -96,13 +96,13 @@ const Footer = () => {
 
         <div className=' flex border-t-[1px] border-slate-700 pt-[10px] my-[15px] justify-center items-center '>
   <p className=' font-medium text-gray-400 text-[14px] sm:text-[16px] cursor-pointer flex flex-row justify-center items-center'>
-Developed by Priyanshu Singh 
+Developed by MTS-AUV ZHCET 
 
-<a href='https://github.com/priyanshu082' target="_blank" rel="noopener noreferrer" className='ml-[10px] pb-[4px]'>
+<a href='https://github.com/mts-auvzhcet' target="_blank" rel="noopener noreferrer" className='ml-[10px] pb-[4px]'>
   <GitHubIcon className=' w-[17px] h-[17px] sm:w-[20px] sm:h-[20px] text-blue-500'/>
 </a> 
 
-<a href='https://www.linkedin.com/in/priyanshu-singh-a81975253/' target="_blank" rel="noopener noreferrer" className='ml-[10px] pb-[4px]'>
+<a href='https://www.linkedin.com/company/auv-zhcet/' target="_blank" rel="noopener noreferrer" className='ml-[10px] pb-[4px]'>
   <LinkedInIcon className=' w-[17px] h-[17px] sm:w-[20px] sm:h-[20px] text-blue-500'/>
   </a>
   </p>

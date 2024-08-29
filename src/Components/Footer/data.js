@@ -36,27 +36,27 @@ import twitter from './img/twitter.svg'
 export const handles=[
     {
         icon:instagram,
-        link:'https://www.instagram.com/AUVamu/',
+        link:'https://www.instagram.com/mts_auv_zhcet/',
         name:'Instagram',
     },
     {
         icon:youtube,
-        link:'https://www.youtube.com/@AUVamu720/featured',
+        link:'https://youtube.com/@mtsauvzhcet7066?feature=shared',
         name:'Youtube',
     },
     {
         icon:linkedin,
-        link:'https://www.linkedin.com/company/AUV-amu-student-branch/?originalSubdomain=in',
+        link:'https://www.linkedin.com/company/auv-zhcet/',
         name:'LinkedIn',
     },
     {
         icon:facebook,
-        link:'https://www.facebook.com/AUV.org/',
+        link:'https://youtube.com/@mtsauvzhcet7066?feature=shared',
         name:'FaceBook',
     },
     {
         icon:twitter,
-        link:'https://twitter.com/AUVorg',
+        link:'https://twitter.com/mts_auv_zhcet?lang=en',
         name:'X',
     },
 ]
