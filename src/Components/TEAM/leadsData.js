@@ -7,7 +7,7 @@ const leadsData = [
     { photo: "/Team/Eizad.png", name: "Eizad Hamdan", position: "Vice-Chairperson" },
     { photo: "/Team/Hamza.jpeg", name: "Hamza Hyeder", position: "Secretary" },
     { photo: "/Team/Anas2.png", name: "Mohd Anas", position: "Treasurer" },
-    { photo: "/Team/yusuf.png", name: "Yusuf Hasan", position: "CS Lead" },
+    { photo: "/Team/Yusuf2.jpeg", name: "Yusuf Hasan", position: "CS Lead" },
     { photo: "/Team/Najmus.png", name: "Najmus Saqib", position: "ECE Lead" },
     // { photo: "/Team/Bilal.png", name: "Bilal Dad Khan", position: "Mechanical Lead" },
     { photo: "/Team/Umar.png", name: "Mohd Umar Khan", position: "Webmaster" },
@@ -17,7 +17,7 @@ const leadsData = [
     { photo: "/Team/Saara.png", name: "Saara Sazid Khan", position: "Event Lead" },
     { photo: "/Team/Rayyan.png", name: "Rayyan Khan", position: "PR Lead" },
     // { photo: "/Team/Saim.png", name: "Saim Khan", position: "Sponsorship Lead" },
-    { photo: "/Team/Arquam.jpeg", name: "Arqum Suhail", position: "School Reachout Lead" }
+    { photo: "/Team/Arquam.jpeg", name: "Arqam Suhail", position: "School Reachout Lead" }
 ];
 
   
