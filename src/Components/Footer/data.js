@@ -26,11 +26,11 @@ export const items=[
    
 ]
 
-import youtube from './img/youtube.svg'
-import instagram from './img/instagram.svg'
-import linkedin from './img/linkedin.svg'
-import facebook from './img/facebook.svg'
-import twitter from './img/twitter.svg'
+import youtube from './img/youtube.svg';
+import instagram from './img/instagram.svg';
+import linkedin from './img/linkedin.svg';
+import facebook from './img/facebook.svg';
+import twitter from './img/twitter.svg';
 
 
 export const handles=[

@@ -6,16 +6,16 @@ const leadsData = [
     { photo: "/Team/Isfar.png", name: "Isfar Ahmad Sherwani", position: "Chairperson (Operational Affairs)" },
     { photo: "/Team/Eizad.png", name: "Eizad Hamdan", position: "Vice-Chairperson" },
     { photo: "/Team/Hamza.jpeg", name: "Hamza Hyeder", position: "Secretary" },
+    { photo: "/Team/Sidra.png", name: "Sidra Wajeeh", position: "Joint Secretary" },
     { photo: "/Team/Anas2.png", name: "Mohd Anas", position: "Treasurer" },
     { photo: "/Team/Yusuf2.jpeg", name: "Yusuf Hasan", position: "CS Lead" },
     { photo: "/Team/Najmus.png", name: "Najmus Saqib", position: "ECE Lead" },
     // { photo: "/Team/Bilal.png", name: "Bilal Dad Khan", position: "Mechanical Lead" },
     { photo: "/Team/Umar.png", name: "Mohd Umar Khan", position: "Webmaster" },
-    { photo: "/Team/Sidra.png", name: "Sidra Wajeeh", position: "Joint Secretary" },
     { photo: "/Team/Aamina.png", name: "Aamina Siddiqui", position: "Content Lead" },
     { photo: "/Team/Alhamd.jpeg", name: "Al hamd Ahmad", position: "Content Lead" },
     { photo: "/Team/Saara.png", name: "Saara Sazid Khan", position: "Event Lead" },
-    { photo: "/Team/Rayyan.png", name: "Rayyan Khan", position: "PR Lead" },
+    { photo: "/Team/Rayyan.png", name: "Rayyan Khan", position: "Social Media Coordinator" },
     // { photo: "/Team/Saim.png", name: "Saim Khan", position: "Sponsorship Lead" },
     { photo: "/Team/Arquam.jpeg", name: "Arqam Suhail", position: "School Reachout Lead" }
 ];

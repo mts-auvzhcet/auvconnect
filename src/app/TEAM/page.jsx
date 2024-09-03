@@ -1,10 +1,10 @@
 'use client'
 
-import React, { useEffect } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import TeamCard from '../../Components/TEAM/TeamCard'
-import leadsData from '@/Components/TEAM/leadsData'
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import TeamCard from '../../Components/TEAM/TeamCard';
+import leadsData from '@/Components/TEAM/leadsData';
 
 
 
@@ -77,4 +77,4 @@ const page = () => {
 	)
 }
 
-export default page
+export default page;
