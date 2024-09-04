@@ -2,6 +2,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+```bash
+git checkout -b your-feature-branch
+```
+
+Installing Dependencies
+
+```bash
+pnpm install
+```
+
 First, run the development server:
 
 ```bash
