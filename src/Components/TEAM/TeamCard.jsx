@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const TeamCard = ({ photo, name, position }) => {
   return (
-    <div className='flex flex-col gap-1 sm:gap-1 font-poppins mt-[20px] sm:w-[31%] mb-[30px] sm:mb-[50px] pl-10'>
+    <div className='flex flex-col gap-1 sm:gap-1 font-poppins mt-[20px] sm:w-[31%] mb-[30px] sm:mb-[50px] px-10'>
       {/* image */}
       <div className='grayscale'>
         <Image src={photo} alt="image" height={310} width={310} className='rounded-lg' />
