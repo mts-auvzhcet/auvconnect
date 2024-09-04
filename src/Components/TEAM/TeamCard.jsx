@@ -1,16 +1,16 @@
 'use client'
 
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
 // import linkedin from '../Footer/img/linkedin.svg'
 
-const TeamCard = ({photo,name,position}) => {
+const TeamCard = ({ photo, name, position }) => {
   return (
-    <div className='flex flex-col gap-5 sm:gap-7 font-poppins mt-[20px] sm:w-[31%] mb-[30px] sm:mb-[50px]'>
+    <div className='flex flex-col gap-1 sm:gap-1 font-poppins mt-[20px] sm:w-[31%] mb-[30px] sm:mb-[50px] pl-10'>
       {/* image */}
       <div className='grayscale'>
-      <Image src={photo} alt="image" height={550} width={550} className='rounded-lg'/>
+        <Image src={photo} alt="image" height={310} width={310} className='rounded-lg' />
       </div>
 
       {/* name position */}
@@ -19,7 +19,7 @@ const TeamCard = ({photo,name,position}) => {
           {name}
         </div>
         <div className='font-light text-[15px] tracking-[2px] '>
-        {position}
+          {position}
         </div>
       </div>
 
@@ -32,4 +32,4 @@ const TeamCard = ({photo,name,position}) => {
   )
 }
 
-export default TeamCard
+export default TeamCard;
