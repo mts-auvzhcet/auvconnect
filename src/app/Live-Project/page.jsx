@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 const Page = () => {
 
     const main = useRef(null)
+    // autobase
     const videoRef = useRef(null)
     const heading = useRef(null)
     const content = useRef(null)
@@ -22,6 +23,11 @@ const Page = () => {
     const image3 = useRef(null)
     const image4 = useRef(null)
 
+    // 3d printer
+    const heading2 = useRef(null)
+    const content2 = useRef(null)
+    const section2 = useRef(null)
+
     useEffect(() => {
 
         if (window.innerWidth > 560) {
@@ -31,9 +37,9 @@ const Page = () => {
                     trigger: section1.current,
                     scrub: 4,
                     toggleActions: 'play reverse play reverse',
-                    //markers:true,
+                    // markers:true,
                     start: "top 100px",
-                    end: "40% top",
+                    end: "bottom 100px",
                 }
             })
 
@@ -50,19 +56,25 @@ const Page = () => {
                 x: "50px",
             }, "section1")
 
-            const tl = gsap.timeline({
+            gsap.to(main.current, {
+                background: "white",
                 scrollTrigger: {
+                    // markers:true,
                     trigger: div1.current,
-                    //markers:true,  
-                    start: "top 120px",
-                    end: "bottom top",
-                    toggleActions: 'play none none reverse',
+                    start: "top 400px",
+                    end: "bottom 400px",
+                    toggleActions: 'play reverse play reverse',
                 }
             })
 
-            tl.to(main.current, {
-                background: "white",
-                duration: 0.5,
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: div1.current,
+                    // markers:true,  
+                    start: "top 400px",
+                    end: "bottom 400px",
+                    toggleActions: 'play none none reverse',
+                }
             })
 
             tl.to(image1.current, {
@@ -85,6 +97,7 @@ const Page = () => {
                 duration: 1,
                 ease: "power1.inOut"
             }, "img")
+
         }
 
 
@@ -112,18 +125,37 @@ const Page = () => {
                 </div>
 
                 {/* images */}
-                <div className='flex flex-col py-[30px] '>
+                <div ref={div1} className='flex flex-col p-[30px]'>
 
-                    <div ref={div1} className='w-[100%] flex flex-row justify-between mt-[50px]'>
+                    <div className='w-[100%] flex flex-row justify-between mt-[50px]'>
                         <Image ref={image1} src="/Live_project/img1.png" height={600} width={600} className='rounded-2xl image1  w-[40vw]' />
                         <Image ref={image2} src="/Live_project/img2.png" height={600} width={600} className='rounded-2xl image2  w-[40vw]' />
                     </div>
 
-                    <div ref={div2} className='w-[100%] flex flex-row justify-between mt-[50px]'>
+                    <div className='w-[100%] flex flex-row justify-between mt-[50px]'>
                         <Image ref={image3} src="/Live_project/img2.png" height={600} width={600} className='rounded-2xl image1 w-[40vw]' />
                         <Image ref={image4} src="/Live_project/img4.png" height={600} width={600} className='rounded-2xl image2 w-[40vw]' />
                     </div>
 
+                </div>
+                {/* 3r pinter with 2 vids and 1 image and 1 content */}
+                <div ref={section2} className='w-[100%] flex flex-col justify-center items-center p-4'>
+                    <div ref={heading2} className='w-[100%] flex flex-col justify-center items-center font-poppins font-medium pt-[70px] mb-[20px]'>
+                        <div className='text-primary mx-auto text-center text-[12vw] md:text-[6vw] '>
+                            3D Printer
+                        </div>
+                    </div>
+                    <div className='flex flex-col md:flex-row justify-between items-center gap-5' ref={content2}>
+                        <div className='w-[85%] md:w-[30%] overflow-hidden rounded-xl'>
+                            <video src='/Live_project/printer_vid1.mov' loop muted autoPlay className='w-full' />
+                        </div>
+                        <div className='text-gray-400 text-center font-light w-[85%] md:w-[30%] text-[5vw] md:text-[2.5vw]'>
+                            A 3D printer is like a futuristic sculptor, capable of bringing your wildest ideas to life layer by layer. It turns digital designs into tangible objects by building them from the ground up, using materials like plastic, metal, or even ceramics.
+                        </div>
+                        <div className='w-[85%] md:w-[30%] overflow-hidden rounded-xl'>
+                            <video src='/Live_project/printer_vid2.mov' loop muted autoPlay className='w-full' />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
