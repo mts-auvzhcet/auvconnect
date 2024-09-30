@@ -38,8 +38,8 @@ const Page = () => {
                     scrub: 4,
                     toggleActions: 'play reverse play reverse',
                     // markers:true,
-                    start: "top 100px",
-                    end: "bottom 100px",
+                    start: "top 10vh",
+                    end: "bottom 10vh",
                 }
             })
 
@@ -61,8 +61,8 @@ const Page = () => {
                 scrollTrigger: {
                     // markers:true,
                     trigger: div1.current,
-                    start: "top 400px",
-                    end: "bottom 400px",
+                    start: "top 50vh",
+                    end: "bottom 50vh",
                     toggleActions: 'play reverse play reverse',
                 }
             })
@@ -71,8 +71,8 @@ const Page = () => {
                 scrollTrigger: {
                     trigger: div1.current,
                     // markers:true,  
-                    start: "top 400px",
-                    end: "bottom 400px",
+                    start: "top 50vh",
+                    end: "bottom 50vh",
                     toggleActions: 'play none none reverse',
                 }
             })
