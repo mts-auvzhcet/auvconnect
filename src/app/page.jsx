@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
-import IntroLogo from '../Components/Feed/IntroLogo'
+import IntroLogo from '../components/Feed/IntroLogo'
 import Image from 'next/image'
 
 
