@@ -128,6 +128,15 @@ background-position-y: -65vh;
   background: linear-gradient(156deg, rgba(0,0,0,0.1273503151260504) 10%, rgba(41, 138, 228, 0.238) 100%); 
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 @layer base {
   :root {
         --background: 0 0% 100%;

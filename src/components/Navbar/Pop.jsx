@@ -16,7 +16,7 @@ const Pop = ({ toggle, setToggle }) => {
     <div className='md:hidden flex flex-col h-[100vh]'>
       <div className='flex flex-col'>
 
-        <motion.div className=' flex flex-row justify-between px-[20px] py-[15px] bg-zinc-900 shadow-3xl shadow-[#ffffffcc]md:shadow-none'>
+        <motion.div className=' flex flex-row justify-between px-[20px] py-[15px] bg-zinc-900 shadow-3xl shadow-[#ffffffcc] md:shadow-none'>
 
           <div className=''>
             <Link
@@ -41,7 +41,7 @@ const Pop = ({ toggle, setToggle }) => {
           initial="hidden"
           animate="show"
           variants={fadeInOut(0.1, 0.5)}
-          className={` ${toggle ? "flex md:hidden flex-col" : "hidden"} p-[10px] bg-zinc-900 border-primary rounded-b-[40px] font-apple w-[100vw] font-normal text-[#ffffffcc] h-[260px] flex-wrap pb-[30px] pt-[10px]`}>
+          className={` ${toggle ? "flex md:hidden flex-col" : "hidden"} p-[10px] bg-zinc-900 border-primary rounded-b-[40px] font-apple w-[100vw] font-normal text-[#ffffff] h-[260px] flex-wrap pb-[30px] pt-[10px]`}>
           {navBottom.map((items, index) => (
             <Link onClick={() => {
               setToggle(!toggle);
