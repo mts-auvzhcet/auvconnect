@@ -46,7 +46,7 @@ const Pop = ({ toggle, setToggle }) => {
             <Link onClick={() => {
               setToggle(!toggle);
               setActive(items.name)
-            }} key={index} href={items.link} target={items.target ? items.target : '_self'} className={`${active === items.name ? "text-zinc-500 scale-105 font-bold" : "text-primary"} mt-[16px] w-fit ml-[17vw] text-[19px]`}>
+            }} key={index} href={items.link} target={items.target ? items.target : '_self'} className={`${active === items.name ? "scale-105 font-bold" : "text-zinc-500"} mt-[16px] w-fit ml-[17vw] text-[19px]`}>
               <motion.div
                 key={toggle ? 'visible' : 'hidden'}
                 initial="hidden"
