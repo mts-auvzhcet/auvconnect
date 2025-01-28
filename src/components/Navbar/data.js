@@ -19,8 +19,8 @@ const navBottom=[
         link:"/EVENT"
     },
     {
-        name:"Sponsors",
-        link:"/GALLERY"
+        name:"SAUVC",
+        link:"/SAUVC"
     },
     {
         name:"Tech",
