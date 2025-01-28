@@ -38,7 +38,7 @@ const chartConfig = {
     },
 }
 
-const page = () => {
+function Component() {
 
     const totalPercentageRaised = React.useMemo(() => {
         return (chartData[0].value / (chartData[0].value + chartData[1].value)) * 100
@@ -137,4 +137,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Component
