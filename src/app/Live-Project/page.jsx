@@ -147,13 +147,13 @@ const Page = () => {
                     </div>
                     <div className='flex flex-col md:flex-row justify-between items-center gap-5' ref={content2}>
                         <div className='w-[85%] md:w-[30%] overflow-hidden rounded-xl'>
-                            <video src='/Live_project/printer_vid1.mov' loop muted autoPlay className='w-full' />
+                            <video src='/Live_project/printer_vid1.mp4' loop muted autoPlay className='w-full' />
                         </div>
                         <div className='text-gray-400 text-center font-light w-[85%] md:w-[30%] text-[5vw] md:text-[2.5vw]'>
                             A 3D printer is like a futuristic sculptor, capable of bringing your wildest ideas to life layer by layer. It turns digital designs into tangible objects by building them from the ground up, using materials like plastic, metal, or even ceramics.
                         </div>
                         <div className='w-[85%] md:w-[30%] overflow-hidden rounded-xl'>
-                            <video src='/Live_project/printer_vid2.mov' loop muted autoPlay className='w-full' />
+                            <video src='/Live_project/printer_vid2.mp4' loop muted autoPlay className='w-full' />
                         </div>
                     </div>
                 </div>
