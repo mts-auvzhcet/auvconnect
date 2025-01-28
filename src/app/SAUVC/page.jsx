@@ -17,19 +17,6 @@ import {
     ChartTooltip,
     ChartTooltipContent,
 } from "@/components/ui/chart"
-const chartConfig = {
-    visitors: {
-        label: "Visitors",
-    },
-    contributions: {
-        label: "Contributions",
-        color: "hsl(var(--chart-1))",
-    },
-    remaining: {
-        label: "Remaining",
-        color: "hsl(var(--chart-2))",
-    },
-}
 
 function Component() {
     const [amount, setAmount] = React.useState(0)
@@ -43,7 +30,7 @@ function Component() {
             setRemaining(700000 - data)
         })
     }, [])
-    
+
     const totalPercentageRaised = React.useMemo(() => {
         return (amount / (amount + remaining)) * 100
     }, [amount, remaining])
