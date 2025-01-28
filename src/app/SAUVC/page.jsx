@@ -18,21 +18,43 @@ import {
     ChartTooltipContent,
 } from "@/components/ui/chart"
 
+const chartData = [
+    { money: "contributions", value: 0, fill: "white" },
+    { money: "remaining", value: 700000, fill: "gray" },
+]
+
+const chartConfig = {
+    Value: {
+        label: "value",
+    },
+    contributions: {
+        label: "Contributions",
+        color: "white",
+    },
+    remaining: {
+        label: "Remaining",
+        color: "gray",
+    },
+}
+
 function Component() {
     const [amount, setAmount] = React.useState(0)
     const [remaining, setRemaining] = React.useState(700000)
-    
+
     React.useEffect(() => {
         fetch("/api/scrape")
         .then(res => res.json())
         .then(data => {
-            setAmount(data)
-            setRemaining(700000 - data)
-        })
+                setAmount(data)
+                setRemaining(700000 - data)
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error)
+            })
     }, [])
-
+    
     const totalPercentageRaised = React.useMemo(() => {
-        return (amount / (amount + remaining)) * 100
+        return (amount / 700000) * 100
     }, [amount, remaining])
 
     return (
