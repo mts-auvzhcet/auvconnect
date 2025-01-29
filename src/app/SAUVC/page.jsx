@@ -38,20 +38,20 @@ const chartConfig = {
 }
 
 function Component() {
-    const [amount, setAmount] = React.useState(0)
-    const [remaining, setRemaining] = React.useState(700000)
+    const [amount, setAmount] = React.useState(68044)
+    const [remaining, setRemaining] = React.useState(700000 - amount)
 
-    React.useEffect(() => {
-        fetch("/api/scrape")
-        .then(res => res.json())
-        .then(data => {
-                setAmount(data)
-                setRemaining(700000 - data)
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error)
-            })
-    }, [])
+    // React.useEffect(() => {
+    //     fetch("/api/scrape")
+    //     .then(res => res.json())
+    //     .then(data => {
+    //             setAmount(data)
+    //             setRemaining(700000 - data)
+    //         })
+    //         .catch(error => {
+    //             console.error('Error fetching data:', error)
+    //         })
+    // }, [])
     
     const totalPercentageRaised = React.useMemo(() => {
         return (amount / 700000) * 100
