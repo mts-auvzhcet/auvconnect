@@ -12,7 +12,6 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-
 import {
     ChartContainer,
     ChartTooltip,
@@ -20,29 +19,43 @@ import {
 } from "@/components/ui/chart"
 
 const chartData = [
-    { money: "contributions", value: 68044, fill: "white" }, // fill black color
-    { money: "remaining", value: 631956, fill: "gray" },
+    { money: "contributions", value: 0, fill: "white" },
+    { money: "remaining", value: 700000, fill: "gray" },
 ]
 
 const chartConfig = {
-    visitors: {
-        label: "Visitors",
+    Value: {
+        label: "value",
     },
     contributions: {
         label: "Contributions",
-        color: "hsl(var(--chart-1))",
+        color: "white",
     },
     remaining: {
         label: "Remaining",
-        color: "hsl(var(--chart-2))",
+        color: "gray",
     },
 }
 
 function Component() {
+    const [amount, setAmount] = React.useState(68044)
+    const [remaining, setRemaining] = React.useState(700000 - amount)
 
+    // React.useEffect(() => {
+    //     fetch("/api/scrape")
+    //     .then(res => res.json())
+    //     .then(data => {
+    //             setAmount(data)
+    //             setRemaining(700000 - data)
+    //         })
+    //         .catch(error => {
+    //             console.error('Error fetching data:', error)
+    //         })
+    // }, [])
+    
     const totalPercentageRaised = React.useMemo(() => {
-        return (chartData[0].value / (chartData[0].value + chartData[1].value)) * 100
-    }, [])
+        return (amount / 700000) * 100
+    }, [amount, remaining])
 
     return (
         <div className='bg-black pt-[20px]'>
@@ -81,7 +94,10 @@ function Component() {
                                                 content={<ChartTooltipContent hideLabel />}
                                             />
                                             <Pie
-                                                data={chartData}
+                                                data={[
+                                                    { money: "contributions", value: amount, fill: "white" },
+                                                    { money: "remaining", value: remaining, fill: "gray" },
+                                                ]}
                                                 dataKey="value"
                                                 nameKey="money"
                                                 innerRadius={60}
@@ -122,7 +138,7 @@ function Component() {
                                 </CardContent>
                                 <CardFooter className="flex-col gap-2 text-sm">
                                     <div className="flex items-center gap-2 font-medium leading-none">
-                                        Raised ₹68,000 of ₹7,00,000 <TrendingUp className="h-4 w-4" />
+                                        Raised ₹{amount} of ₹700000 <TrendingUp className="h-4 w-4" />
                                     </div>
                                     <div className="leading-none text-muted-foreground">
                                         Showing total contributions for the last 2 months
