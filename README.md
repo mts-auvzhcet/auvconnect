@@ -9,7 +9,7 @@ git checkout -b your-feature-branch
 Installing Dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
 First, run the development server:
