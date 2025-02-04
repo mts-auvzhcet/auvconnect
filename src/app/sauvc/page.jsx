@@ -38,7 +38,7 @@ const chartConfig = {
 }
 
 function Component() {
-    const [amount, setAmount] = React.useState(68044)
+    const [amount, setAmount] = React.useState(82044)
     const [remaining, setRemaining] = React.useState(700000 - amount)
 
     // React.useEffect(() => {
@@ -55,7 +55,7 @@ function Component() {
     
     const totalPercentageRaised = React.useMemo(() => {
         return (amount / 700000) * 100
-    }, [amount, remaining])
+    }, [amount])
 
     return (
         <div className='bg-black pt-[20px]'>
@@ -63,7 +63,7 @@ function Component() {
                 {/* heading and video */}
                 <div className='w-[100%]'>
                     <div className='w-[100%] flex flex-col justify-center items-center font-poppins font-medium pt-[70px]'>
-                        <div className='text-primary mx-auto text-center text-[12vw] md:text-[6vw] '>
+                        <div className='text-zinc-600 font-bold mx-auto text-center text-[12vw] md:text-[6vw] '>
                             SAUVC 2025
                         </div>
                         <div className='text-gray-400 text-[5vw] md:text-[1.6vw] w-[70%] text-center mx-auto font-light'>
@@ -95,8 +95,8 @@ function Component() {
                                             />
                                             <Pie
                                                 data={[
-                                                    { money: "contributions", value: amount, fill: "white" },
-                                                    { money: "remaining", value: remaining, fill: "gray" },
+                                                    { money: "++", value: amount, fill: "lightgray" },
+                                                    { money: "--", value: remaining, fill: "gray" },
                                                 ]}
                                                 dataKey="value"
                                                 nameKey="money"
@@ -118,7 +118,7 @@ function Component() {
                                                                         y={viewBox.cy}
                                                                         className="fill-white text-3xl font-bold"
                                                                     >
-                                                                        {totalPercentageRaised.toFixed(2)}%
+                                                                        {totalPercentageRaised.toPrecision(3)}%
                                                                     </tspan>
                                                                     <tspan
                                                                         x={viewBox.cx}

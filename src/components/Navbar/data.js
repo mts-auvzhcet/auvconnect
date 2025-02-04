@@ -1,4 +1,4 @@
-import { TagRounded } from "@mui/icons-material";
+// import { TagRounded } from "@mui/icons-material";
 
 
 const navBottom=[
@@ -8,23 +8,23 @@ const navBottom=[
     },
     {
         name:"Team",
-        link:"/TEAM"
+        link:"/team"
     },
     {
         name:"Project",
-        link:"/Live-Project"
+        link:"/projects"
     },
     {
         name:"Event",
-        link:"/EVENT"
+        link:"/events"
     },
     {
         name:"SAUVC",
-        link:"/SAUVC"
+        link:"/sauvc"
     },
     {
         name:"Tech",
-        link:"/GALLERY"
+        link:"/"
     },
     // {
     //     name:"History",
@@ -32,7 +32,7 @@ const navBottom=[
     // },
     {
         name:"Gallery",
-        link:"/GALLERY"
+        link:"/events"
     },
     {
         name:"AMU ROVc",

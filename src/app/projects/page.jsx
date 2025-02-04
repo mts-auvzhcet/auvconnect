@@ -128,13 +128,13 @@ const Page = () => {
                 <div ref={div1} className='flex flex-col p-[30px]'>
 
                     <div className='w-[100%] flex flex-row justify-between mt-[50px]'>
-                        <Image ref={image1} src="/Live_project/img1.png" height={600} width={600} className='rounded-2xl image1  w-[40vw]' />
-                        <Image ref={image2} src="/Live_project/img2.png" height={600} width={600} className='rounded-2xl image2  w-[40vw]' />
+                        <Image ref={image1} src="/Live_project/img1.png" height={600} width={600} className='rounded-2xl image1  w-[40vw]' alt='img1' />
+                        <Image ref={image2} src="/Live_project/img2.png" height={600} width={600} className='rounded-2xl image2  w-[40vw]' alt='img2' />
                     </div>
 
                     <div className='w-[100%] flex flex-row justify-between mt-[50px]'>
-                        <Image ref={image3} src="/Live_project/img2.png" height={600} width={600} className='rounded-2xl image1 w-[40vw]' />
-                        <Image ref={image4} src="/Live_project/img4.png" height={600} width={600} className='rounded-2xl image2 w-[40vw]' />
+                        <Image ref={image3} src="/Live_project/img2.png" height={600} width={600} className='rounded-2xl image1 w-[40vw]' alt='img3' />
+                        <Image ref={image4} src="/Live_project/img4.png" height={600} width={600} className='rounded-2xl image2 w-[40vw]' alt='img4' />
                     </div>
 
                 </div>
