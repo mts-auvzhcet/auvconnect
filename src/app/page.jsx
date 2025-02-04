@@ -199,8 +199,8 @@ export default function Home() {
                 </div>
 
                 <div ref={div4Images} className='w-[100%] flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between mt-[30px] md:mt-[100px]'>
-                    <Image ref={image1} src="/LandingPage/objectDetection1.png" height={500} width={500} className='rounded-2xl image1 sm:w-[33vw]' />
-                    <Image ref={image2} src="/LandingPage/objectDetection2.png" height={500} width={500} className='rounded-2xl image2 sm:w-[33vw]' />
+                    <Image ref={image1} src="/LandingPage/objectDetection1.png" height={500} width={500} className='rounded-2xl image1 sm:w-[33vw]' alt='objectDetection1' />
+                    <Image ref={image2} src="/LandingPage/objectDetection2.png" height={500} width={500} className='rounded-2xl image2 sm:w-[33vw]' alt='objectDetection2' />
                 </div>
 
             </div>

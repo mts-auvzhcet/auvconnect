@@ -3,11 +3,13 @@ import React from 'react'
 import { items, handles } from './data'
 import Image from 'next/image'
 import logo from '../../../public/auv1.png'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import MailIcon from '@mui/icons-material/Mail';
+import {FaGithub, FaLinkedin, FaPhone, FaMailBulk, FaMapMarker, FaMapMarkerAlt, FaEnvelope} from 'react-icons/fa'
+
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import LocationOnIcon from '@mui/icons-material/LocationOn';
+// import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+// import MailIcon from '@mui/icons-material/Mail';
 
 
 const Footer = () => {
@@ -23,7 +25,7 @@ const Footer = () => {
           <div className='flex flex-col gap-6 justify-center items-center w-full sm:w-auto'>
             <Image src={logo} alt="logo" className='min-w-[70px] max-w-[120px] sm:w-[12vw]  lg:w-[12.5vw]' />
             <div className='flex flex-row text-gray-400 gap-1 w-full justify-center '>
-              <LocationOnIcon className="w-[15px] h-[15px] mt-[2px]" />
+              <FaMapMarkerAlt className="w-[15px] h-[15px] mt-[2px]" />
               <a href="https://maps.app.goo.gl/ZzqtV6rzk7LdxfG39" className='text-[13px]'>
                 Main Building,<br />
                 ZHCET, AMU,<br />
@@ -82,11 +84,12 @@ const Footer = () => {
               <div className='text-[17px] font-light tracking-widest'>
                 Contact us
               </div>
-              <div className='text-center text-gray-400'>
-                <LocalPhoneIcon className='w-[18px] h-[18px] mr-[5px] text-gray-400' />+91 8171296181, +91 7535879134, +91 7302415928
+              <div className='text-center text-gray-400 flex flex-row items-center justify-center'>
+                <FaPhone className='w-[18px] h-[18px] mr-[5px] text-gray-400' />
+                  +91 8171296181, +91 7535879134, +91 7302415928
               </div>
-              <a href="mailto:auvzhcet@zhcet.ac.in" className='text-center text-gray-400'>
-                <MailIcon className='w-[18px] h-[18px] mr-[5px] text-gray-400' />
+              <a href="mailto:auvzhcet@zhcet.ac.in" className='text-center text-gray-400 flex flex-row items-center justify-center'>
+                <FaEnvelope className='w-[18px] h-[18px] mr-[5px] text-gray-400' />
                 auvzhcet@zhcet.ac.in
               </a>
             </div>
@@ -100,11 +103,11 @@ const Footer = () => {
             Developed by MTS-AUV ZHCET
 
             <a href='https://github.com/mts-auvzhcet' target="_blank" rel="noopener noreferrer" className='ml-[10px] pb-[4px]'>
-              <GitHubIcon className=' w-[17px] h-[17px] sm:w-[20px] sm:h-[20px] text-blue-500' />
+              <FaGithub className=' w-[17px] h-[17px] sm:w-[20px] sm:h-[20px] text-blue-500' />
             </a>
 
             <a href='https://www.linkedin.com/company/auv-zhcet/' target="_blank" rel="noopener noreferrer" className='ml-[10px] pb-[4px]'>
-              <LinkedInIcon className=' w-[17px] h-[17px] sm:w-[20px] sm:h-[20px] text-blue-500' />
+              <FaLinkedin className=' w-[17px] h-[17px] sm:w-[20px] sm:h-[20px] text-blue-500' />
             </a>
           </p>
         </div>
