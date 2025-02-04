@@ -83,7 +83,7 @@ export default function Page() {
                                     className={`absolute inset-0 bg-black bg-opacity-90 p-2 my-3 gap-2 flex flex-col items-center justify-center overflow-y-scroll hide-scrollbar transition-opacity duration-300 ease-in-out ${activeGallery === event.id ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                                 >
                                     <Button onClick={() => setActiveGallery(null)}>Close</Button>
-                                    <CardContent className="flex flex-row gap-2 mt-2 overflow-y-scroll hide-scrollbar">
+                                    <CardContent className="flex flex-col gap-2 mt-2 overflow-y-scroll hide-scrollbar">
                                         {event.images.map((image, index) => (
                                             <Image
                                                 key={index}

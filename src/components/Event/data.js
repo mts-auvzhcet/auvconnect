@@ -42,9 +42,9 @@ export const eventsData = [
         id: 3,
         date: 'September 2022',
         type: 'International Level Event',
-        title: 'Singapore Autonomous Underwater Vehicle Challenge',
+        title: 'SAUVc',
         report: 'https://docs.google.com/document/d/1QjEgK1xGakUpA-gggfO22e0PivrY2lkxtBBrt-CctFQ/edit?usp=sharing',
-        description: 'MTS AUV-ZHCET participated in the Singapore Autonomous Underwater Vehicle Challenge (SAUV) 2022, a prestigious international competition that challenges teams to design and build autonomous underwater vehicles (AUVs). The event took place in Singapore from September 26 to 29, 2022, and featured a series of challenges designed to test the AUVs navigation, sensing, and manipulation capabilities.',
+        description: 'MTS AUV-ZHCET participated in the Singapore Autonomous Underwater Vehicle Challenge (SAUVc) in 2018 and 2022, a prestigious international competition that challenges teams to design and build autonomous underwater vehicles (AUVs). The event took place in Singapore and featured a series of challenges designed to test the AUVs navigation, sensing, and manipulation capabilities.',
         images: [
             '/events/sauvc/img1.png',
             '/events/sauvc/img2.png',
