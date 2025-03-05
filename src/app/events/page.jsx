@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/card"
 import Autoplay from "embla-carousel-autoplay"
 import Link from 'next/link'
-import { eventsData } from '@/components/Event/data'
+import { eventsData } from '@/components/custom/eventData'
 
 export default function Page() {
     const [activeGallery, setActiveGallery] = useState(null);
@@ -45,7 +45,7 @@ export default function Page() {
                 }}
                 plugins={[
                     Autoplay({
-                        delay: 5000,
+                        delay: 1000,
                         stopOnMouseEnter: true,
                         stopOnInteraction: false,
                     }),
@@ -99,6 +99,7 @@ export default function Page() {
                             </Card>
                         </CarouselItem>
                     ))}
+                    
                 </CarouselContent>
                 <CarouselPrevious />
                 <CarouselNext />

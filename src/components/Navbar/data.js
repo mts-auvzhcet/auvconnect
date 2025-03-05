@@ -24,7 +24,7 @@ const navBottom=[
     },
     {
         name:"Tech",
-        link:"/"
+        link:"/tech"
     },
     // {
     //     name:"History",

@@ -23,6 +23,7 @@
     "gsap": "^3.12.5",
     "lucide-react": "^0.454.0",
     "next": "14.1.0",
+    "next-cloudinary": "^6.16.0",
     "next-images": "^1.8.5",
     "puppeteer": "^24.1.1",
     "react": "^18",
