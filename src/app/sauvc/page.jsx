@@ -38,7 +38,7 @@ const chartConfig = {
 }
 
 function Component() {
-    const [amount, setAmount] = React.useState(82044)
+    const [amount, setAmount] = React.useState(99044)
     const [remaining, setRemaining] = React.useState(700000 - amount)
 
     // React.useEffect(() => {

@@ -3,8 +3,8 @@
 import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import TeamCard from '@/components/TEAM/TeamCard'
-import leadsData from '@/components/TEAM/leadsData'
+import TeamCard from '@/components/custom/TeamCard'
+import leadsData from '@/components/custom/leadsData'
 
 
 
