@@ -24,11 +24,17 @@ export default function Home() {
     const div3 = useRef(null);
     const div4 = useRef(null);
     const heading1 = useRef(null);
+    const vehicles = useRef(null);
+    const testimonials = useRef(null);
+    const latestNews = useRef(null);
 
     useEffect(() => {
         // Set the initial background color to black
         gsap.set(main.current, { backgroundColor: "black" });
         gsap.set(main.current.querySelectorAll("h1"), { color: "white" });
+        gsap.set(vehicles.current, { x: 300, opacity: 0 });
+        gsap.set(testimonials.current, { x: -300, opacity: 0 });
+        gsap.set(latestNews.current, { x: 300, opacity: 0 });
 
         let ctx = gsap.context(() => {
 
@@ -43,13 +49,14 @@ export default function Home() {
                 onLeaveBack: () => {
                     gsap.to(heading1.current, { y: 0, opacity: 1, duration: 1, overwrite: "auto" });
                 },
-            })
+            });
             // Change to black when div2 is in view
             ScrollTrigger.create({
                 trigger: div2.current,
                 start: "top 0%",
                 // end: "bottom 50%",
                 scrub: true,
+                // markers: true,
                 onEnter: () => {
                     gsap.to(main.current, { backgroundColor: "black", duration: 0.5, overwrite: "auto" });
                     gsap.to(main.current.querySelectorAll("h1"), { color: "white", duration: 0.5, overwrite: "auto" });
@@ -93,6 +100,48 @@ export default function Home() {
                     gsap.to(main.current.querySelectorAll("h1"), { color: "white", duration: 0.5, overwrite: "auto" });
                 },
             });
+
+            ScrollTrigger.create({
+                trigger: vehicles.current,
+                start: "top 80%",
+                // end: "bottom 50%",
+                scrub: true,
+                // markers: true,
+                onEnter: () => {
+                    gsap.fromTo(vehicles.current, { x: 300, opacity: 0 }, { x: 0, opacity: 1, duration: 1, overwrite: "auto" });
+                },
+                onLeaveBack: () => {
+                    gsap.fromTo(vehicles.current, { x: 0, opacity: 1 }, { x: 300, opacity: 0, duration: 1, overwrite: "auto" });
+                }
+            });
+
+            ScrollTrigger.create({
+                trigger: testimonials.current,
+                start: "top 80%",
+                // end: "bottom 50%",
+                scrub: true,
+                // markers: true,
+                onEnter: () => {
+                    gsap.fromTo(testimonials.current, { x: -300, opacity: 0 }, { x: 0, opacity: 1, duration: 1, overwrite: "auto" });
+                },
+                onLeaveBack: () => {
+                    gsap.fromTo(testimonials.current, { x: 0, opacity: 1 }, { x: -300, opacity: 0, duration: 1, overwrite: "auto" });
+                }
+            });
+
+            ScrollTrigger.create({
+                trigger: latestNews.current,
+                start: "top 80%",
+                // end: "bottom 50%",
+                scrub: true,
+                // markers: true,
+                onEnter: () => {
+                    gsap.fromTo(latestNews.current, { x: 300, opacity: 0 }, { x: 0, opacity: 1, duration: 1, overwrite: "auto" });
+                },
+                onLeaveBack: () => {
+                    gsap.fromTo(latestNews.current, { x: 0, opacity: 1 }, { x: 300, opacity: 0, duration: 1, overwrite: "auto" });
+                }
+            });
         });
 
         return () => ctx.revert(); // Cleanup GSAP on unmount
@@ -113,68 +162,74 @@ export default function Home() {
 
             {/* our vehicles - cards  */}
             <div className="py-11" ref={div2}>
-                <h1 className="text-center font-bold font-poppins text-3xl lg:text-5xl pb-8">
-                    Our Vehicles!
-                    <br />
-                    Safina-E-Aabdoz&apos; (SEA)
-                </h1>
-                {/* <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-3 mx-auto'> */}
-                <div className="flex flex-wrap justify-center gap-2 mx-auto">
-                    {vehicleData.map((vehicle, index) => (
-                        <VehicleCard
-                            key={index}
-                            photo={vehicle.photo}
-                            title={vehicle.title}
-                            keyFeatures={vehicle.keyFeatues}
-                        />
-                    ))}
+                <div ref={vehicles}>
+                    <h1 className="text-center font-bold font-poppins text-3xl lg:text-5xl pb-8">
+                        Our Vehicles!
+                        <br />
+                        Safina-E-Aabdoz&apos; (SEA)
+                    </h1>
+                    {/* <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-3 mx-auto'> */}
+                    <div className="flex flex-wrap justify-center gap-2 mx-auto">
+                        {vehicleData.map((vehicle, index) => (
+                            <VehicleCard
+                                key={index}
+                                photo={vehicle.photo}
+                                title={vehicle.title}
+                                keyFeatures={vehicle.keyFeatues}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
 
             {/* testimonials */}
             <div className='py-20' ref={div3}>
-                <div>
-                    <h1 className='text-center font-bold font-poppins text-3xl lg:text-5xl pb-8'>
-                        Words of Wisdom by our very own!
-                    </h1>
+                <div ref={testimonials}>
+                    <div>
+                        <h1 className='text-center font-bold font-poppins text-3xl lg:text-5xl pb-8'>
+                            Words of Wisdom by our very own!
+                        </h1>
+                    </div>
+                    <Carousel
+                        opts={{
+                            align: "start",
+                            loop: true,
+                        }}
+                        plugins={[
+                            Autoplay({
+                                delay: 3000,
+                                stopOnMouseEnter: true,
+                                stopOnInteraction: false,
+                            }),
+                        ]}
+                        className=""
+                    >
+                        <CarouselContent className=''>
+                            {testimonialData.map((testimonial) => (
+                                <CarouselItem key={testimonial.id} className="">
+                                    <TestimonialCard
+                                        remark={testimonial.remark}
+                                        image={testimonial.image}
+                                        name={testimonial.name}
+                                        designation={testimonial.designation}
+                                    />
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                    </Carousel>
                 </div>
-                <Carousel
-                    opts={{
-                        align: "start",
-                        loop: true,
-                    }}
-                    plugins={[
-                        Autoplay({
-                            delay: 3000,
-                            stopOnMouseEnter: true,
-                            stopOnInteraction: false,
-                        }),
-                    ]}
-                    className=""
-                >
-                    <CarouselContent className=''>
-                        {testimonialData.map((testimonial) => (
-                            <CarouselItem key={testimonial.id} className="">
-                                <TestimonialCard
-                                    remark={testimonial.remark}
-                                    image={testimonial.image}
-                                    name={testimonial.name}
-                                    designation={testimonial.designation}
-                                />
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                </Carousel>
             </div>
 
             {/* latest news  */}
             <div className='py-20' ref={div4}>
-                <h1 className='text-center font-bold font-poppins text-3xl lg:text-5xl pb-8'>
-                    Latest News!
-                </h1>
-                <div className='flex justify-center'>
-                    <div>
-                        <LatestNews />
+                <div ref={latestNews}>
+                    <h1 className='text-center font-bold font-poppins text-3xl lg:text-5xl pb-8'>
+                        Latest News!
+                    </h1>
+                    <div className='flex justify-center'>
+                        <div>
+                            <LatestNews />
+                        </div>
                     </div>
                 </div>
             </div>
