@@ -49,6 +49,20 @@ const vehicleData = [
             "3 Hydrophones for Underwater Acoustic Source Localization"
         ],
     },
+    {
+        id: 5,
+        photo: "/auvs/sea5.0.png",
+        title: "SEA 5.0",
+        keyFeatues: [
+            "Thrusters: 6",
+            "Degree of freedom: 6",
+            "Depth Rating: 100 m",
+            "Maximum Speed: 4 knot",
+            "Endurance: 60 mins",
+            "2 Cameras: one at front and another at the bottom of the vehicle",
+            "3 Hydrophones for Underwater Acoustic Source Localization"
+        ],
+    }
 ];
   
   
