@@ -12,7 +12,7 @@ import {
 
 const VehicleCard = ({ photo, title, keyFeatures }) => {
     return (
-        <Card className='bg-black text-gray-400 transition duration-300 ease-in-out'>
+        <Card className='bg-black text-gray-400 transition duration-300 ease-in-out w-[300px] h-auto'>
             <CardHeader className='flex items-center justify-center'>
                 <Image src={photo} alt={title} width={800} height={800} />
                 <CardTitle className='text-bold text-xl'>{title}</CardTitle>
