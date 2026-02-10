@@ -19,8 +19,8 @@ const navBottom=[
         link:"/events"
     },
     {
-        name:"SAUVC",
-        link:"/sauvc"
+        name:"Benefactors",
+        link:"/benefactors"
     },
     {
         name:"Tech",
