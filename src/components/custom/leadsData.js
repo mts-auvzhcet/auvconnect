@@ -13,7 +13,7 @@ const leadsData = [
   { photo: "/Team/supreet.jpg", name: "Supreet Chaudhary", position: "Co-R&D Lead" },
   { photo: "/Team/nabiha.jpg", name: "Nabiha Irfan", position: "Joint Secretary" },
   { photo: "/Team/tanishka.jpg", name: "Tanishka Bharadwaj", position: "Joint Secretary" },
-  { photo: "/Team/Hasan.jpg", name: "Mohammad Hasan", position: "Treasurer" },
+  { photo: "/Team/Hasan.JPG", name: "Mohammad Hasan", position: "Treasurer" },
   { photo: "/Team/musab.jpg", name: "Musab Ahmad Khan", position: "Treasurer" },
   { photo: "/Team/no.jpg", name: "Ahmad Moosa Saad Saeed Siddiqui", position: "Event Lead" },
 ];
