@@ -36,39 +36,44 @@ const LeadershipPage = () => {
 
 			<div className='flex flex-col mx-[10px] sm:mx-[25px] bg-white gap-16 mt-[20px] pb-16'>
 				
-				{/* Faculty Councilor Section */}
-				{facultyCouncilor && (
-					<div className='w-full flex flex-col items-center'>
+				{/* Faculty Section Container (Side-by-side on desktop, stacked on mobile) */}
+				<div className='flex flex-col md:flex-row gap-12 md:gap-16 w-full items-start justify-center'>
+					
+					{/* Faculty Councilor Section */}
+					{facultyCouncilor && (
+						<div className='w-full md:w-auto flex flex-col items-center md:sticky md:top-[12vh]'>
+							<h2 className='text-center text-zinc-500 font-poppins tracking-[3px] text-[18px] sm:text-[22px] font-medium border-b border-zinc-200 pb-2 mb-8 w-fit px-8 whitespace-nowrap'>
+								FACULTY COUNCILOR
+							</h2>
+							<div className='flex justify-center w-full'>
+								<TeamCard
+									photo={facultyCouncilor.photo}
+									name={facultyCouncilor.name}
+									position={facultyCouncilor.position}
+									department={facultyCouncilor.department}
+								/>
+							</div>
+						</div>
+					)}
+
+					{/* Faculty Advisors Section */}
+					<div className='w-full md:flex-1 flex flex-col items-center'>
 						<h2 className='text-center text-zinc-500 font-poppins tracking-[3px] text-[18px] sm:text-[22px] font-medium border-b border-zinc-200 pb-2 mb-8 w-fit px-8'>
-							FACULTY COUNCIOR
+							FACULTY ADVISORS / ORGANISING SECRETARIES
 						</h2>
-						<div className='flex justify-center w-full'>
-							<TeamCard
-								photo={facultyCouncilor.photo}
-								name={facultyCouncilor.name}
-								position={facultyCouncilor.position}
-								department={facultyCouncilor.department}
-							/>
+						<div className='flex flex-wrap justify-center gap-6 sm:gap-8 w-full'>
+							{facultyAdvisors.map((member, index) => (
+								<TeamCard
+									key={index}
+									photo={member.photo}
+									name={member.name}
+									position={member.position}
+									department={member.department}
+								/>
+							))}
 						</div>
 					</div>
-				)}
 
-				{/* Faculty Advisors Section */}
-				<div className='w-full flex flex-col items-center'>
-					<h2 className='text-center text-zinc-500 font-poppins tracking-[3px] text-[18px] sm:text-[22px] font-medium border-b border-zinc-200 pb-2 mb-8 w-fit px-8'>
-						FACULTY ADVISORS / ORGANISING SECRETARIES
-					</h2>
-					<div className='flex flex-wrap justify-center gap-6 sm:gap-8 w-full'>
-						{facultyAdvisors.map((member, index) => (
-							<TeamCard
-								key={index}
-								photo={member.photo}
-								name={member.name}
-								position={member.position}
-								department={member.department}
-							/>
-						))}
-					</div>
 				</div>
 
 				{/* Student Leads Section */}
