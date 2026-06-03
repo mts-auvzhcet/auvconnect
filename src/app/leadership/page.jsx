@@ -59,7 +59,7 @@ const LeadershipPage = () => {
 					{/* Faculty Advisors Section */}
 					<div className='w-full md:flex-1 flex flex-col items-center'>
 						<h2 className='text-center text-zinc-500 font-poppins tracking-[3px] text-[18px] sm:text-[22px] font-medium border-b border-zinc-200 pb-2 mb-8 w-fit px-8'>
-							FACULTY ADVISORS / ORGANISING SECRETARIES
+							FACULTY ADVISORS
 						</h2>
 						<div className='flex flex-wrap justify-center gap-6 sm:gap-8 w-full'>
 							{facultyAdvisors.map((member, index) => (
