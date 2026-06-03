@@ -7,8 +7,8 @@ const navBottom=[
         link:"/"
     },
     {
-        name:"Team",
-        link:"/team"
+        name:"Leadership",
+        link:"/leadership"
     },
     {
         name:"Project",

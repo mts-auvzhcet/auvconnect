@@ -3,32 +3,45 @@
 import React from 'react';
 import Image from 'next/image';
 
-// import linkedin from '../Footer/img/linkedin.svg'
+const TeamCard = ({ photo, name, position, department }) => {
+  const isRemote = photo && (photo.startsWith('http://') || photo.startsWith('https://'));
 
-const TeamCard = ({ photo, name, position }) => {
   return (
-    <div className='flex flex-col gap-1 sm:gap-1 font-poppins mt-[20px] sm:w-[31%] mb-[30px] sm:mb-[50px] px-10'>
-      {/* image */}
-      <div className='grayscale'>
-        <Image src={photo} alt="image" height={310} width={310} className='rounded-lg' />
+    <div className='group flex flex-col gap-2 font-poppins w-[140px] sm:w-[170px] md:w-[190px] mb-8 transition-all duration-300 text-center'>
+      {/* Image container with overflow hidden and hover zoom */}
+      <div className='overflow-hidden rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 aspect-square w-full'>
+        {isRemote ? (
+          <img 
+            src={photo} 
+            alt={name} 
+            className='object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 ease-out' 
+          />
+        ) : (
+          <Image 
+            src={photo} 
+            alt={name} 
+            height={200} 
+            width={200} 
+            className='object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 ease-out' 
+          />
+        )}
       </div>
 
-      {/* name position */}
-      <div className='ml-[5px] flex flex-col gap-2'>
-        <div className='tracking-[3.75px] font-semibold text-[15px]'>
+      {/* Info container */}
+      <div className='flex flex-col gap-1 px-1'>
+        <div className='tracking-wider font-semibold text-[13px] sm:text-[14px] md:text-[15px] text-zinc-800 transition-colors duration-300 group-hover:text-zinc-950 mt-1 leading-snug'>
           {name}
         </div>
-        <div className='font-light text-[15px] tracking-[2px] '>
+        <div className='font-light text-[11px] sm:text-[12px] md:text-[13px] tracking-wide text-zinc-500 leading-snug'>
           {position}
         </div>
+        {department && (
+          <div className='font-normal text-[9px] sm:text-[10px] md:text-[11px] text-zinc-400 tracking-normal leading-tight mt-0.5'>
+            {department}
+          </div>
+        )}
       </div>
-
-      {/* message */}
-      {/* <div className='ml-[5px] text-[16px] font-apple '>
-      In West Philadelphia, born and raised… Khalid spent his early days curating visual displays. He went on to merchandise some of Philadelphia’s finest props and antiques before embarking on a 10+ year career in Arts Education. Khalid Stewart defines what it means to be both artist and educator. Equipped with a BFA from the University of The Arts and years of dealing with the art and practice of creating strong visual content, he now manages and directs the vision and the voice of Philly Reps.
-      </div> */}
     </div>
-
   )
 }
 
